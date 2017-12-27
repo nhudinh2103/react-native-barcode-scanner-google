@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		740693BF1FF2EFA400F8D155 /* RNBSG.m in Sources */ = {isa = PBXBuildFile; fileRef = 740693BE1FF2EFA400F8D155 /* RNBSG.m */; };
 		740693C01FF2EFA400F8D155 /* RNBSG.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 740693BD1FF2EFA400F8D155 /* RNBSG.h */; };
+		742FA3FD1FF308B20020E004 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742FA3FC1FF308B20020E004 /* SwiftView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		740693BA1FF2EFA400F8D155 /* libRNBSG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBSG.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		740693BD1FF2EFA400F8D155 /* RNBSG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBSG.h; sourceTree = "<group>"; };
 		740693BE1FF2EFA400F8D155 /* RNBSG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBSG.m; sourceTree = "<group>"; };
+		742FA3FB1FF308B10020E004 /* RNBSG-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBSG-Bridging-Header.h"; sourceTree = "<group>"; };
+		742FA3FC1FF308B20020E004 /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				740693BD1FF2EFA400F8D155 /* RNBSG.h */,
 				740693BE1FF2EFA400F8D155 /* RNBSG.m */,
+				742FA3FC1FF308B20020E004 /* SwiftView.swift */,
+				742FA3FB1FF308B10020E004 /* RNBSG-Bridging-Header.h */,
 			);
 			path = RNBSG;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				TargetAttributes = {
 					740693B91FF2EFA400F8D155 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -122,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742FA3FD1FF308B20020E004 /* SwiftView.swift in Sources */,
 				740693BF1FF2EFA400F8D155 /* RNBSG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,7 +184,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -226,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -236,10 +243,15 @@
 		740693C41FF2EFA400F8D155 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBSG/RNBSG-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -247,10 +259,14 @@
 		740693C51FF2EFA400F8D155 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBSG/RNBSG-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
