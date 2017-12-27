@@ -10,6 +10,7 @@
 		740693BF1FF2EFA400F8D155 /* RNBSG.m in Sources */ = {isa = PBXBuildFile; fileRef = 740693BE1FF2EFA400F8D155 /* RNBSG.m */; };
 		740693C01FF2EFA400F8D155 /* RNBSG.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 740693BD1FF2EFA400F8D155 /* RNBSG.h */; };
 		742FA3FD1FF308B20020E004 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742FA3FC1FF308B20020E004 /* SwiftView.swift */; };
+		742FA4741FF378CA0020E004 /* SwiftViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 742FA4721FF378CA0020E004 /* SwiftViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		740693BE1FF2EFA400F8D155 /* RNBSG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBSG.m; sourceTree = "<group>"; };
 		742FA3FB1FF308B10020E004 /* RNBSG-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBSG-Bridging-Header.h"; sourceTree = "<group>"; };
 		742FA3FC1FF308B20020E004 /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
+		742FA4721FF378CA0020E004 /* SwiftViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftViewManager.m; sourceTree = "<group>"; };
+		742FA4731FF378CA0020E004 /* SwiftViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftViewManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 		740693BC1FF2EFA400F8D155 /* RNBSG */ = {
 			isa = PBXGroup;
 			children = (
+				742FA4731FF378CA0020E004 /* SwiftViewManager.h */,
+				742FA4721FF378CA0020E004 /* SwiftViewManager.m */,
 				740693BD1FF2EFA400F8D155 /* RNBSG.h */,
 				740693BE1FF2EFA400F8D155 /* RNBSG.m */,
 				742FA3FC1FF308B20020E004 /* SwiftView.swift */,
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742FA4741FF378CA0020E004 /* SwiftViewManager.m in Sources */,
 				742FA3FD1FF308B20020E004 /* SwiftView.swift in Sources */,
 				740693BF1FF2EFA400F8D155 /* RNBSG.m in Sources */,
 			);
