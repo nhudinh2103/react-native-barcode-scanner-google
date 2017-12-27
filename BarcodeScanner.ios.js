@@ -1,4 +1,8 @@
-import React, { Component } from 'react';
+import { requireNativeComponent } from 'react-native';
+
+export default requireNativeComponent('SwiftView', null);
+
+/*import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 class BarcodeScanner extends Component {
@@ -15,4 +19,4 @@ class BarcodeScanner extends Component {
   }
 }
 
-export default BarcodeScanner;
+export default BarcodeScanner;*/
