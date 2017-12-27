@@ -43,3 +43,8 @@ captures/
 
 # DS store
 .DS_Store
+
+# xcode
+xcuserdata
+*.xcuserstate
+project.xcworkspace
