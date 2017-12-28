@@ -15,7 +15,7 @@
  */
 
 @import AVFoundation;
-@import GoogleMobileVision;
+#import "GoogleMobileVision.h"
 
 #import "CameraViewController.h"
 #import "DrawingUtility.h"
