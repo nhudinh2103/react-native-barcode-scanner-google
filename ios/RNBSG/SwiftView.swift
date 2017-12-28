@@ -7,7 +7,7 @@ import UIKit
 
 class SwiftView: UIView {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-    let childVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UITabBarController
+    let childVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! CameraViewController
     
     override init(frame: CGRect) {
         super.init(frame: frame)
