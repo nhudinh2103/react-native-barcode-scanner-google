@@ -9,12 +9,21 @@ import UIKit
 
 class SwiftView: UIView {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+    let childVC = CameraViewController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        label.text = "This is initial text on the swift side"
-        addSubview(label)
+        if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
+            rootVC.addChildViewController(childVC)
+            
+            addSubview(childVC.view)
+            
+            childVC.didMove(toParentViewController: rootVC)
+        }
+        
+        /*label.text = "This is initial text on the swift side"
+        addSubview(label)*/
     }
     
     required init?(coder aDecoder: NSCoder) {
