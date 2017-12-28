@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		740693BF1FF2EFA400F8D155 /* RNBSG.m in Sources */ = {isa = PBXBuildFile; fileRef = 740693BE1FF2EFA400F8D155 /* RNBSG.m */; };
 		740693C01FF2EFA400F8D155 /* RNBSG.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 740693BD1FF2EFA400F8D155 /* RNBSG.h */; };
+		742936551FF4EC0F00865B79 /* DrawingUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 742936521FF4EC0F00865B79 /* DrawingUtility.m */; };
+		742936561FF4EC0F00865B79 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742936531FF4EC0F00865B79 /* CameraViewController.m */; };
 		742FA3FD1FF308B20020E004 /* SwiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742FA3FC1FF308B20020E004 /* SwiftView.swift */; };
 		742FA4741FF378CA0020E004 /* SwiftViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 742FA4721FF378CA0020E004 /* SwiftViewManager.m */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,10 @@
 		740693BA1FF2EFA400F8D155 /* libRNBSG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNBSG.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		740693BD1FF2EFA400F8D155 /* RNBSG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBSG.h; sourceTree = "<group>"; };
 		740693BE1FF2EFA400F8D155 /* RNBSG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBSG.m; sourceTree = "<group>"; };
+		742936511FF4EC0E00865B79 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		742936521FF4EC0F00865B79 /* DrawingUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingUtility.m; sourceTree = "<group>"; };
+		742936531FF4EC0F00865B79 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		742936541FF4EC0F00865B79 /* DrawingUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingUtility.h; sourceTree = "<group>"; };
 		742FA3FB1FF308B10020E004 /* RNBSG-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBSG-Bridging-Header.h"; sourceTree = "<group>"; };
 		742FA3FC1FF308B20020E004 /* SwiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftView.swift; sourceTree = "<group>"; };
 		742FA4721FF378CA0020E004 /* SwiftViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftViewManager.m; sourceTree = "<group>"; };
@@ -66,6 +72,10 @@
 		740693BC1FF2EFA400F8D155 /* RNBSG */ = {
 			isa = PBXGroup;
 			children = (
+				742936511FF4EC0E00865B79 /* CameraViewController.h */,
+				742936531FF4EC0F00865B79 /* CameraViewController.m */,
+				742936541FF4EC0F00865B79 /* DrawingUtility.h */,
+				742936521FF4EC0F00865B79 /* DrawingUtility.m */,
 				742FA4731FF378CA0020E004 /* SwiftViewManager.h */,
 				742FA4721FF378CA0020E004 /* SwiftViewManager.m */,
 				740693BD1FF2EFA400F8D155 /* RNBSG.h */,
@@ -133,9 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742936561FF4EC0F00865B79 /* CameraViewController.m in Sources */,
 				742FA4741FF378CA0020E004 /* SwiftViewManager.m in Sources */,
 				742FA3FD1FF308B20020E004 /* SwiftView.swift in Sources */,
 				740693BF1FF2EFA400F8D155 /* RNBSG.m in Sources */,
+				742936551FF4EC0F00865B79 /* DrawingUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
