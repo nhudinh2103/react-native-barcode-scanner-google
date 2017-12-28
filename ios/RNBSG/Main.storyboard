@@ -5,11 +5,10 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera-->
+        <!--Camera View Controller-->
         <scene sceneID="IpF-0W-XNu">
             <objects>
                 <viewController id="KRo-mj-2Px" customClass="CameraViewController" sceneMemberID="viewController">
@@ -17,44 +16,31 @@
                         <viewControllerLayoutGuide type="top" id="Qcv-iM-JEL"/>
                         <viewControllerLayoutGuide type="bottom" id="F7K-cN-J84"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zDr-3k-sgr">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="zDr-3k-sgr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APv-oL-V7Z" userLabel="placeholder">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APv-oL-V7Z" userLabel="placeholder">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byc-oZ-Hai" userLabel="overlay">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byc-oZ-Hai" userLabel="overlay">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Byc-oZ-Hai" firstAttribute="leading" secondItem="zDr-3k-sgr" secondAttribute="leadingMargin" id="6BM-H2-LpB"/>
-                            <constraint firstAttribute="trailing" secondItem="Byc-oZ-Hai" secondAttribute="trailing" id="9nN-1K-wDh"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="APv-oL-V7Z" secondAttribute="bottom" id="BO5-8r-U7E"/>
-                            <constraint firstItem="APv-oL-V7Z" firstAttribute="leading" secondItem="zDr-3k-sgr" secondAttribute="leading" id="Bg1-NK-LwX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="APv-oL-V7Z" secondAttribute="trailing" id="Cjo-Vd-U4O"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Byc-oZ-Hai" secondAttribute="bottom" id="Gzk-OO-jSc"/>
-                            <constraint firstItem="Byc-oZ-Hai" firstAttribute="leading" secondItem="zDr-3k-sgr" secondAttribute="leading" id="Uyv-u4-nrB"/>
-                            <constraint firstAttribute="trailing" secondItem="APv-oL-V7Z" secondAttribute="trailing" id="W6X-Tt-sSi"/>
-                            <constraint firstItem="APv-oL-V7Z" firstAttribute="top" secondItem="zDr-3k-sgr" secondAttribute="topMargin" id="XUv-Vl-fLh"/>
-                            <constraint firstItem="Byc-oZ-Hai" firstAttribute="top" secondItem="zDr-3k-sgr" secondAttribute="topMargin" id="rCf-BG-3Wt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Byc-oZ-Hai" secondAttribute="trailing" id="rbh-vw-vHZ"/>
-                            <constraint firstItem="APv-oL-V7Z" firstAttribute="leading" secondItem="zDr-3k-sgr" secondAttribute="leadingMargin" id="uFW-vG-rVT"/>
+                            <constraint firstItem="APv-oL-V7Z" firstAttribute="leading" secondItem="zDr-3k-sgr" secondAttribute="leading" id="18P-IK-tnX"/>
+                            <constraint firstItem="Byc-oZ-Hai" firstAttribute="top" secondItem="zDr-3k-sgr" secondAttribute="top" id="QwF-Ur-p0T"/>
+                            <constraint firstAttribute="trailing" secondItem="Byc-oZ-Hai" secondAttribute="trailing" id="YSy-hF-ml0"/>
+                            <constraint firstItem="Byc-oZ-Hai" firstAttribute="leading" secondItem="zDr-3k-sgr" secondAttribute="leading" id="Ya9-bY-HkD"/>
+                            <constraint firstAttribute="bottom" secondItem="Byc-oZ-Hai" secondAttribute="bottom" id="dZa-N2-QaV"/>
+                            <constraint firstItem="F7K-cN-J84" firstAttribute="top" secondItem="APv-oL-V7Z" secondAttribute="bottom" id="gEa-Hn-poX"/>
+                            <constraint firstItem="APv-oL-V7Z" firstAttribute="top" secondItem="zDr-3k-sgr" secondAttribute="top" id="hXg-5z-3Hg"/>
+                            <constraint firstAttribute="trailing" secondItem="APv-oL-V7Z" secondAttribute="trailing" id="rlh-E0-yrj"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Cjo-Vd-U4O"/>
-                                <exclude reference="uFW-vG-rVT"/>
-                                <exclude reference="6BM-H2-LpB"/>
-                                <exclude reference="rbh-vw-vHZ"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="Camera" id="Usm-r7-jfZ"/>
                     <connections>
                         <outlet property="overlayView" destination="Byc-oZ-Hai" id="qb2-dN-GGL"/>
                         <outlet property="placeHolderView" destination="APv-oL-V7Z" id="383-yK-ANr"/>
@@ -62,10 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWR-uI-nNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-272" y="63"/>
+            <point key="canvasLocation" x="-273.75" y="62.323943661971832"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Camera" width="36" height="36"/>
-    </resources>
 </document>
