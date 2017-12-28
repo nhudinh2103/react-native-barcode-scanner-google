@@ -2,23 +2,30 @@
 //  SwiftView.swift
 //  RNBSG
 //
-//  Created by Apel Yl on 27/12/2017.
-//
 
 import UIKit
 
 class SwiftView: UIView {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
-    let childVC = CameraViewController()
+    let childVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UITabBarController
+    //let childVC = CameraViewController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
+        /*if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
             rootVC.addChildViewController(childVC)
             
             addSubview(childVC.view)
             
+            childVC.didMove(toParentViewController: rootVC)
+        }*/
+        
+        if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
+            rootVC.addChildViewController(childVC)
+            //childVC.swiftView = self
+            addSubview(childVC.view)
+            autoresizesSubviews = false
             childVC.didMove(toParentViewController: rootVC)
         }
         
