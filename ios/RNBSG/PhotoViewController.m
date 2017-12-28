@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-@import GoogleMobileVision;
+#import "GoogleMobileVision.h"
 
 #import "DrawingUtility.h"
 #import "PhotoViewController.h"
