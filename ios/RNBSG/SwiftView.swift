@@ -6,7 +6,6 @@
 import UIKit
 
 class SwiftView: UIView {
-    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
     let childVC = UIStoryboard(name: "GMVBD", bundle: nil).instantiateInitialViewController() as! CameraViewController
     
     override init(frame: CGRect) {
@@ -15,9 +14,14 @@ class SwiftView: UIView {
         if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
             rootVC.addChildViewController(childVC)
             addSubview(childVC.view)
-            autoresizesSubviews = false
             childVC.didMove(toParentViewController: rootVC)
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        childVC.view.frame = bounds
     }
     
     required init?(coder aDecoder: NSCoder) {
