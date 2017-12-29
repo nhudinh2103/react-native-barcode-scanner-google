@@ -1,8 +1,8 @@
-#IOS WIP
+# IOS WIP
 Currently it's only exposition CameraViewController from
 <https://github.com/googlesamples/ios-vision/tree/master/BarcodeDetectorDemo>
 
-#RUN
+## RUN
 To try IOS extension you need to do the following:
 
 1.
