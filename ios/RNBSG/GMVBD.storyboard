@@ -4,14 +4,15 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera View Controller-->
+        <!--Barcode Scanner View Controller-->
         <scene sceneID="IpF-0W-XNu">
             <objects>
-                <viewController id="KRo-mj-2Px" customClass="CameraViewController" sceneMemberID="viewController">
+                <viewController id="KRo-mj-2Px" customClass="BarcodeScannerViewController" customModule="RNBSG" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qcv-iM-JEL"/>
                         <viewControllerLayoutGuide type="bottom" id="F7K-cN-J84"/>
