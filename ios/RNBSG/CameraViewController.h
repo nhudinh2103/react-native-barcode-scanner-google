@@ -15,9 +15,16 @@
  */
 
 @import UIKit;
+@import AVFoundation;
+#import "GoogleMobileVision.h"
 
 // View controller demonstraing how to use the barcode detector with the AVFoundation
 // video pipeline.
 @interface CameraViewController : UIViewController
+
+@property(nonatomic, assign) UIDeviceOrientation lastKnownDeviceOrientation;
+@property(nonatomic, strong) GMVDetector *barcodeDetector;
+
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
 
 @end

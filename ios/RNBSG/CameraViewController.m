@@ -30,9 +30,9 @@
 @property(nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
 @property(nonatomic, strong) dispatch_queue_t videoDataOutputQueue;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
-@property(nonatomic, assign) UIDeviceOrientation lastKnownDeviceOrientation;
+//@property(nonatomic, assign) UIDeviceOrientation lastKnownDeviceOrientation;
 
-@property(nonatomic, strong) GMVDetector *barcodeDetector;
+//@property(nonatomic, strong) GMVDetector *barcodeDetector;
 
 @end
 

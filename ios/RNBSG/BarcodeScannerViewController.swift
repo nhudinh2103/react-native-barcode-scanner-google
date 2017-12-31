@@ -19,6 +19,25 @@ class BarcodeScannerViewController: CameraViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+        //super.captureOutput(captureOutput, didOutputSampleBuffer: sampleBuffer, from: connection)
+        
+        let image: UIImage = GMVUtility.sampleBufferTo32RGBA(sampleBuffer)
+        let devicePosition: AVCaptureDevicePosition = AVCaptureDevicePosition.back
+        
+        let deviceOrientation: UIDeviceOrientation = UIDevice.current.orientation
+        let orientation: GMVImageOrientation = GMVUtility.imageOrientation(from: deviceOrientation, with: devicePosition, defaultDeviceOrientation: self.lastKnownDeviceOrientation)
+        let options: [ String: NSInteger ] = [ GMVDetectorImageOrientation: orientation.rawValue ]
+        
+        
+        if let barcodes = self.barcodeDetector.features(in: image, options: options) as? [GMVBarcodeFeature] {
+            print("Detected \(barcodes.count) barcodes")
+            
+            for barcode in barcodes {
+                print(barcode.rawValue, barcode.format)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

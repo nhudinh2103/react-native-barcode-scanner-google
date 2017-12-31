@@ -3,3 +3,4 @@
 //
 
 #import "CameraViewController.h"
+#import "GoogleMobileVision.h"
