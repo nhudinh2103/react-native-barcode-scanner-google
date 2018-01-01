@@ -5,7 +5,7 @@
 
 import UIKit
 
-class SwiftView: UIView {
+class SwiftView: SwiftViewObjC {
     let childVC = UIStoryboard(name: "GMVBD", bundle: nil).instantiateInitialViewController() as! CameraViewController
     
     override init(frame: CGRect) {
