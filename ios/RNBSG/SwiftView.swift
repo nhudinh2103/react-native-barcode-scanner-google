@@ -6,13 +6,14 @@
 import UIKit
 
 class SwiftView: SwiftViewObjC {
-    let childVC = UIStoryboard(name: "GMVBD", bundle: nil).instantiateInitialViewController() as! CameraViewController
+    let childVC = UIStoryboard(name: "GMVBD", bundle: nil).instantiateInitialViewController() as! BarcodeScannerViewController
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
             rootVC.addChildViewController(childVC)
+            childVC.swiftView = self
             addSubview(childVC.view)
             childVC.didMove(toParentViewController: rootVC)
         }

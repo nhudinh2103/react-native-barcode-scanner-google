@@ -1,22 +1,26 @@
+import React, { Component } from 'react';
 import { requireNativeComponent } from 'react-native';
-
-export default requireNativeComponent('SwiftView', null);
-
-/*import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import PropTypes from 'prop-types'
 
 class BarcodeScanner extends Component {
+  _onBarcodeRead = (event) => {
+
+    if (!this.props.onBarcodeRead) {
+      return;
+    }
+
+    this.props.onBarcodeRead(event.nativeevent);
+  }
+
   render() {
-    return (
-      <View style={{
-        marginTop: 20
-      }}>
-        <Text>
-          There will be ios impl.
-        </Text>
-      </View>
-    )
+    return <NativeBarcodeScanner {...this.props} />
   }
 }
 
-export default BarcodeScanner;*/
+BarcodeScanner.propTypes = {
+  onBarcodeRead: PropTypes.func
+};
+
+const NativeBarcodeScanner = requireNativeComponent('SwiftView', BarcodeScanner);
+
+export default BarcodeScanner;

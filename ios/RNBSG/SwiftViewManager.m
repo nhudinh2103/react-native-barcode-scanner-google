@@ -10,7 +10,8 @@
 @implementation SwiftViewManager
 
 RCT_EXPORT_MODULE()
-RCT_EXPORT_VIEW_PROPERTY(text, NSString)
+RCT_EXPORT_VIEW_PROPERTY(onBarcodeRead, RCTBubblingEventBlock)
+
 
 - (UIView *) view
 {

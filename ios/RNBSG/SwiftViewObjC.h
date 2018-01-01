@@ -4,6 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <React/RCTComponent.h>
 
 @interface SwiftViewObjC : UIView
 

@@ -7,7 +7,8 @@
 import UIKit
 
 class BarcodeScannerViewController: CameraViewController {
-
+    var swiftView: SwiftView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +36,10 @@ class BarcodeScannerViewController: CameraViewController {
             
             for barcode in barcodes {
                 print(barcode.rawValue, barcode.format)
+                
+                if let onBarcodeRead = swiftView?.onBarcodeRead {
+                    onBarcodeRead([:])
+                }
             }
         }
     }
