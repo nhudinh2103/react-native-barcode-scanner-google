@@ -7,6 +7,8 @@
 
 @interface SwiftViewObjC : UIView
 
+@property (nonatomic, copy) RCTBubblingEventBlock onBarcodeRead;
+
 //Usual view stuff to override
 - (void)layoutSubviews;
 
