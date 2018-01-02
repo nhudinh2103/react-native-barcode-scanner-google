@@ -9,11 +9,14 @@ class BarcodeScanner extends Component {
       return;
     }
 
-    this.props.onBarcodeRead(event.nativeevent);
+    this.props.onBarcodeRead({data: event.nativeEvent.data, type: event.nativeEvent.type});
   }
 
   render() {
-    return <NativeBarcodeScanner {...this.props} />
+    return <NativeBarcodeScanner 
+      {...this.props}
+      onBarcodeRead = {this._onBarcodeRead}
+    />
   }
 }
 

@@ -32,13 +32,16 @@ class BarcodeScannerViewController: CameraViewController {
         
         
         if let barcodes = self.barcodeDetector.features(in: image, options: options) as? [GMVBarcodeFeature] {
-            print("Detected \(barcodes.count) barcodes")
+            //print("Detected \(barcodes.count) barcodes")
             
             for barcode in barcodes {
                 print(barcode.rawValue, barcode.format)
                 
                 if let onBarcodeRead = swiftView?.onBarcodeRead {
-                    onBarcodeRead([:])
+                    onBarcodeRead([
+                        "data": String(barcode.rawValue) ?? "",
+                        "type": String(barcode.format.rawValue)
+                    ])
                 }
             }
         }
