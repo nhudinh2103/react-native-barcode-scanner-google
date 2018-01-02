@@ -64,7 +64,7 @@ class BarcodeScannerViewController: CameraViewController {
             //print("Detected \(barcodes.count) barcodes")
             
             for barcode in barcodes {
-                print(barcode.rawValue, barcode.format)
+                //print(barcode.rawValue, barcode.format)
                 let data = String(barcode.rawValue) ?? ""
                 let type = barcodeTypesDict[barcode.format.rawValue] ?? "unknown"
                 
