@@ -5,13 +5,13 @@
 //
 
 /*
- * This file cantains Swift rewrites of CameraViewContoller.m and CameraViewController.h from
+ * This file contains Swift rewrites of CameraViewContoller.m and CameraViewController.h from
  * https://github.com/googlesamples/ios-vision/tree/master/BarcodeDetectorDemo .
  *
  * The original files (CameraViewContoller.m and CameraViewController.h) are
  * under copyright of Google Inc. and Apache v2.0 license.
  *
- * That's vary importent, polite and formaly right to note.
+ * That's vary important, polite and formally right to note.
  *
  */
  
