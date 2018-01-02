@@ -1,5 +1,7 @@
 # IOS WIP
-Currently it's only exposition CameraViewController from
+Porperty 'onBarcodeRead' is supported (only).
+
+The project started as an exposition CameraViewController from
 <https://github.com/googlesamples/ios-vision/tree/master/BarcodeDetectorDemo>
 
 ## RUN
