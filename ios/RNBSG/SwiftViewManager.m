@@ -15,7 +15,7 @@ RCT_EXPORT_VIEW_PROPERTY(onBarcodeRead, RCTBubblingEventBlock)
 
 - (UIView *) view
 {
-  return [[SwiftView alloc] init];
+  return [[BarcodeScannerView alloc] init];
 }
 
 @end
