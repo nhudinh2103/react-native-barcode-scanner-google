@@ -3,7 +3,6 @@
 //  RNSwift
 //
 
-#import <MapKit/MapKit.h>
 #import "BarcodeScannerViewManager.h"
 #import "RNBSG-Swift.h"
 

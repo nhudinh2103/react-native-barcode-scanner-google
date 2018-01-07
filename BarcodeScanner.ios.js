@@ -24,6 +24,6 @@ BarcodeScanner.propTypes = {
   onBarcodeRead: PropTypes.func
 };
 
-const NativeBarcodeScanner = requireNativeComponent('SwiftView', BarcodeScanner);
+const NativeBarcodeScanner = requireNativeComponent('BarcodeScannerView', BarcodeScanner);
 
 export default BarcodeScanner;
