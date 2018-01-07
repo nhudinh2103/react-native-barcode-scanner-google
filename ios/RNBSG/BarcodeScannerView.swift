@@ -6,7 +6,7 @@
 import UIKit
 
 class BarcodeScannerView: BarcodeScannerViewObjC {
-    let childVC = UIStoryboard(name: "GMVBD", bundle: nil).instantiateInitialViewController() as! BarcodeScannerViewController
+    let childVC = UIStoryboard(name: "GMVBD", bundle: nil).instantiateInitialViewController() as! BarcodeScannerChildViewController
     
     override init(frame: CGRect) {
         super.init(frame: frame)

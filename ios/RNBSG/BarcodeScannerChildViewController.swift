@@ -35,7 +35,7 @@ let barcodeTypesDict: [Int: String] = [
 ]
 
 
-class BarcodeScannerViewController: CameraViewController {
+class BarcodeScannerChildViewController: CameraViewController {
     var swiftView: BarcodeScannerView?
     
     override func viewDidLoad() {

@@ -11,7 +11,7 @@
 		742936561FF4EC0F00865B79 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742936531FF4EC0F00865B79 /* CameraViewController.m */; };
 		742FA3FD1FF308B20020E004 /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742FA3FC1FF308B20020E004 /* BarcodeScannerView.swift */; };
 		742FA4741FF378CA0020E004 /* BarcodeScannerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 742FA4721FF378CA0020E004 /* BarcodeScannerViewManager.m */; };
-		746A820A1FF6E56B00F7BB93 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A82091FF6E56B00F7BB93 /* BarcodeScannerViewController.swift */; };
+		746A820A1FF6E56B00F7BB93 /* BarcodeScannerChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746A82091FF6E56B00F7BB93 /* BarcodeScannerChildViewController.swift */; };
 		74B237791FF9835800667B23 /* BarcodeScannerViewObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B237781FF9835800667B23 /* BarcodeScannerViewObjC.m */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		742FA4721FF378CA0020E004 /* BarcodeScannerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeScannerViewManager.m; sourceTree = "<group>"; };
 		742FA4731FF378CA0020E004 /* BarcodeScannerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeScannerViewManager.h; sourceTree = "<group>"; };
 		74356D601FF5073800AB5A96 /* GMVBD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GMVBD.storyboard; sourceTree = "<group>"; };
-		746A82091FF6E56B00F7BB93 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		746A82091FF6E56B00F7BB93 /* BarcodeScannerChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerChildViewController.swift; sourceTree = "<group>"; };
 		74B237771FF9835800667B23 /* BarcodeScannerViewObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarcodeScannerViewObjC.h; sourceTree = "<group>"; };
 		74B237781FF9835800667B23 /* BarcodeScannerViewObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarcodeScannerViewObjC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +92,7 @@
 				742FA4721FF378CA0020E004 /* BarcodeScannerViewManager.m */,
 				742FA3FC1FF308B20020E004 /* BarcodeScannerView.swift */,
 				742FA3FB1FF308B10020E004 /* RNBSG-Bridging-Header.h */,
-				746A82091FF6E56B00F7BB93 /* BarcodeScannerViewController.swift */,
+				746A82091FF6E56B00F7BB93 /* BarcodeScannerChildViewController.swift */,
 				74B237771FF9835800667B23 /* BarcodeScannerViewObjC.h */,
 				74B237781FF9835800667B23 /* BarcodeScannerViewObjC.m */,
 			);
@@ -158,7 +158,7 @@
 			files = (
 				742936561FF4EC0F00865B79 /* CameraViewController.m in Sources */,
 				742FA4741FF378CA0020E004 /* BarcodeScannerViewManager.m in Sources */,
-				746A820A1FF6E56B00F7BB93 /* BarcodeScannerViewController.swift in Sources */,
+				746A820A1FF6E56B00F7BB93 /* BarcodeScannerChildViewController.swift in Sources */,
 				742FA3FD1FF308B20020E004 /* BarcodeScannerView.swift in Sources */,
 				74B237791FF9835800667B23 /* BarcodeScannerViewObjC.m in Sources */,
 				742936551FF4EC0F00865B79 /* DrawingUtility.m in Sources */,
