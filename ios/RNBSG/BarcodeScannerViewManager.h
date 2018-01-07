@@ -6,6 +6,6 @@
 
 #import <React/RCTViewManager.h>
 
-@interface SwiftViewManager : RCTViewManager
+@interface BarcodeScannerViewManager : RCTViewManager
 
 @end

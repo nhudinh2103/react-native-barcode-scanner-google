@@ -4,4 +4,4 @@
 
 #import "CameraViewController.h"
 #import "GoogleMobileVision.h"
-#import "SwiftViewObjC.h"
+#import "BarcodeScannerViewObjC.h"

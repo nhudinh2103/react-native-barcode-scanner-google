@@ -4,10 +4,10 @@
 //
 
 #import <MapKit/MapKit.h>
-#import "SwiftViewManager.h"
+#import "BarcodeScannerViewManager.h"
 #import "RNBSG-Swift.h"
 
-@implementation SwiftViewManager
+@implementation BarcodeScannerViewManager
 
 RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(onBarcodeRead, RCTBubblingEventBlock)

@@ -4,9 +4,9 @@
 //
 
 
-#import "SwiftViewObjC.h"
+#import "BarcodeScannerViewObjC.h"
 
-@implementation SwiftViewObjC
+@implementation BarcodeScannerViewObjC
 
 -(void)layoutSubviews
 {

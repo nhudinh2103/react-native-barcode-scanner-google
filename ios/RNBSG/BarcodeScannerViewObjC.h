@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 #import <React/RCTComponent.h>
 
-@interface SwiftViewObjC : UIView
+@interface BarcodeScannerViewObjC : UIView
 
 @property (nonatomic, copy) RCTBubblingEventBlock onBarcodeRead;
 
