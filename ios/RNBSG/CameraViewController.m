@@ -26,7 +26,7 @@
 @property(nonatomic, weak) IBOutlet UIView *placeHolderView;
 @property(nonatomic, weak) IBOutlet UIView *overlayView;
 
-@property(nonatomic, strong) AVCaptureSession *session;
+//@property(nonatomic, strong) AVCaptureSession *session;
 @property(nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
 @property(nonatomic, strong) dispatch_queue_t videoDataOutputQueue;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
@@ -51,7 +51,7 @@
   [super viewDidLoad];
 
   // Set up default camera settings.
-  self.session = [[AVCaptureSession alloc] init];
+  /*self.session = [[AVCaptureSession alloc] init];
   self.session.sessionPreset = AVCaptureSessionPresetMedium;
   [self updateCameraSelection];
 
@@ -62,7 +62,7 @@
   [self setUpCameraPreview];
 
   // Initialize barcode detector.
-  self.barcodeDetector = [GMVDetector detectorOfType:GMVDetectorTypeBarcode options:nil];
+  self.barcodeDetector = [GMVDetector detectorOfType:GMVDetectorTypeBarcode options:nil];*/
 }
 
 - (void)viewDidLayoutSubviews {

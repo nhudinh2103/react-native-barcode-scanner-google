@@ -40,8 +40,16 @@ class BarcodeScannerChildViewController: CameraViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.session = AVCaptureSession()
+        self.session.sessionPreset = AVCaptureSessionPresetMedium
+        self.updateCameraSelection()
+        
+        self.setUpVideoProcessing()
+        
+        self.setUpCameraPreview()
+        
+        self.barcodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode, options: nil)
     }
 
     override func didReceiveMemoryWarning() {
