@@ -11,12 +11,15 @@ class BarcodeScannerView: BarcodeScannerViewObjC {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
-            rootVC.addChildViewController(childVC)
-            childVC.swiftView = self
-            addSubview(childVC.view)
-            childVC.didMove(toParentViewController: rootVC)
+        DispatchQueue.main.async {
+            if let rootVC = UIApplication.shared.delegate?.window??.rootViewController {
+                rootVC.addChildViewController(self.childVC)
+                self.childVC.swiftView = self
+                self.addSubview(self.childVC.view)
+                self.childVC.didMove(toParentViewController: rootVC)
+            }
         }
+
     }
     
     override func layoutSubviews() {
@@ -29,9 +32,16 @@ class BarcodeScannerView: BarcodeScannerViewObjC {
         fatalError("Init coder isn't supported")
     }
     
-    var barcodeType: Int? {
+    var myBarcodeTypes: Int?
+    
+    var barcodeTypes: Int {
         get {
-            return self.barcodeType ?? nil
+            return self.myBarcodeTypes ?? -1
+        }
+        
+        set(barcodeTypes) {
+            //print("RNBSG", barcodeTypes)
+            self.myBarcodeTypes = barcodeTypes
         }
     }
 }

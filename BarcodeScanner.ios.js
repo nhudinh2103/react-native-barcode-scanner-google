@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { requireNativeComponent } from 'react-native';
 import PropTypes from 'prop-types'
 
-const barcodeTeypesArray = [
+const BCTArray = [
  ["CODE_128", 0x0001],
  ["CODE_39", 0x0002],
  ["CODE_93", 0x0004],
@@ -18,6 +18,23 @@ const barcodeTeypesArray = [
  ["AZTEC", 0x1000]
 ];
 
+const BCTNumToStr = new Map();
+BCTArray.forEach( (item) => { 
+  const strK = item[1];
+  const numV = item[0];
+  BCTNumToStr.set(strK, numV);
+});
+
+export const BarcodeType = BCTArray.reduce(
+  (curBCT, item) => {
+    return {
+      ...curBCT,
+      [item[0]]: item[1]
+    };
+  },
+  {}
+);
+
 class BarcodeScanner extends Component {
   _onBarcodeRead = (event) => {
 
@@ -25,7 +42,10 @@ class BarcodeScanner extends Component {
       return;
     }
 
-    this.props.onBarcodeRead({data: event.nativeEvent.data, type: event.nativeEvent.type});
+    this.props.onBarcodeRead({
+      data: event.nativeEvent.data, 
+      type: BCTNumToStr.get(event.nativeEvent.type)
+    });
   }
 
   render() {
@@ -38,7 +58,7 @@ class BarcodeScanner extends Component {
 
 BarcodeScanner.propTypes = {
   onBarcodeRead: PropTypes.func,
-  barcodeType: PropTypes.number
+  barcodeTypes: PropTypes.number
 };
 
 const NativeBarcodeScanner = requireNativeComponent('BarcodeScannerView', BarcodeScanner);

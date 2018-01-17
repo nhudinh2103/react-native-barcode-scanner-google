@@ -49,7 +49,13 @@ class BarcodeScannerChildViewController: CameraViewController {
         
         self.setUpCameraPreview()
         
-        self.barcodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode, options: nil)
+        var options: [String: Int]?
+        //print("RNBSG2", swiftView?.myBarcodeTypes)
+        if let barcodeTypes = swiftView?.myBarcodeTypes {
+            options = [GMVDetectorBarcodeFormats : barcodeTypes]
+        }
+        
+        self.barcodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode, options: options)
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,7 +80,8 @@ class BarcodeScannerChildViewController: CameraViewController {
             for barcode in barcodes {
                 //print(barcode.rawValue, barcode.format)
                 let data = String(barcode.rawValue) ?? ""
-                let type = barcodeTypesDict[barcode.format.rawValue] ?? "unknown"
+                //let type = barcodeTypesDict[barcode.format.rawValue] ?? "unknown"
+                let type = barcode.format.rawValue
                 
                 if let onBarcodeRead = swiftView?.onBarcodeRead {
                     onBarcodeRead([
