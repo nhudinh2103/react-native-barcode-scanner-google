@@ -21,7 +21,8 @@ class BarcodeScanner extends Component {
 }
 
 BarcodeScanner.propTypes = {
-  onBarcodeRead: PropTypes.func
+  onBarcodeRead: PropTypes.func,
+  barcodeType: PropTypes.number
 };
 
 const NativeBarcodeScanner = requireNativeComponent('BarcodeScannerView', BarcodeScanner);

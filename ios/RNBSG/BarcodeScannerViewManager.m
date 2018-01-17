@@ -10,6 +10,7 @@
 
 RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(onBarcodeRead, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(barcodeType, NSInteger)
 
 
 - (UIView *) view

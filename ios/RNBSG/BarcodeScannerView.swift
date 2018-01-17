@@ -28,4 +28,10 @@ class BarcodeScannerView: BarcodeScannerViewObjC {
     required init?(coder aDecoder: NSCoder) {
         fatalError("Init coder isn't supported")
     }
+    
+    var barcodeType: Int? {
+        get {
+            return self.barcodeType ?? nil
+        }
+    }
 }
