@@ -14,26 +14,8 @@
  * That's vary important, polite and formally right to note.
  *
  */
- 
 
 import UIKit
-
-let barcodeTypesDict: [Int: String] = [
-    GMVDetectorBarcodeFormat.code128.rawValue: "CODE_128",
-    GMVDetectorBarcodeFormat.code39.rawValue: "CODE_39",
-    GMVDetectorBarcodeFormat.code93.rawValue: "CODE_93",
-    GMVDetectorBarcodeFormat.codaBar.rawValue: "CODEBAR",
-    GMVDetectorBarcodeFormat.dataMatrix.rawValue: "DATA_MATRIX",
-    GMVDetectorBarcodeFormat.EAN13.rawValue: "EAN_13",
-    GMVDetectorBarcodeFormat.EAN8.rawValue: "EAN_8",
-    GMVDetectorBarcodeFormat.ITF.rawValue: "ITF",
-    GMVDetectorBarcodeFormat.qrCode.rawValue: "QR_CODE",
-    GMVDetectorBarcodeFormat.UPCA.rawValue: "UPC_A",
-    GMVDetectorBarcodeFormat.UPCE.rawValue: "UPC_E",
-    GMVDetectorBarcodeFormat.PDF417.rawValue: "PDF417",
-    GMVDetectorBarcodeFormat.aztec.rawValue: "AZTEC"
-]
-
 
 class BarcodeScannerChildViewController: CameraViewController {
     var swiftView: BarcodeScannerView?
@@ -85,11 +67,6 @@ class BarcodeScannerChildViewController: CameraViewController {
                 
                 if let onBarcodeRead = swiftView?.onBarcodeRead {
                     onBarcodeRead([
-                        /*
-                         "data": String(barcode.rawValue) ?? "",
-                         "type": String(barcode.format.rawValue)
-                        */
-                        
                         "data" : data,
                         "type" : type
                     ])
