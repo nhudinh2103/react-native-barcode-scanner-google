@@ -1,5 +1,5 @@
 # IOS WIP
-Property 'onBarcodeRead' is supported (only).
+Property 'onBarcodeRead' and barcodeTypes are supported (only).
 
 The project started as an exposition of CameraViewController from
 <https://github.com/googlesamples/ios-vision/tree/master/BarcodeDetectorDemo>

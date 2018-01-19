@@ -32,16 +32,16 @@ class BarcodeScannerView: BarcodeScannerViewObjC {
         fatalError("Init coder isn't supported")
     }
     
-    var myBarcodeTypes: Int?
+    var maybeBarcodeTypes: Int?
     
     var barcodeTypes: Int {
         get {
-            return self.myBarcodeTypes ?? -1
+            return self.maybeBarcodeTypes ?? -1
         }
         
         set(barcodeTypes) {
             //print("RNBSG", barcodeTypes)
-            self.myBarcodeTypes = barcodeTypes
+            self.maybeBarcodeTypes = barcodeTypes
         }
     }
 }

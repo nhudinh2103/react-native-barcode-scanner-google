@@ -51,7 +51,7 @@ class BarcodeScannerChildViewController: CameraViewController {
         
         var options: [String: Int]?
         //print("RNBSG2", swiftView?.myBarcodeTypes)
-        if let barcodeTypes = swiftView?.myBarcodeTypes {
+        if let barcodeTypes = swiftView?.maybeBarcodeTypes {
             options = [GMVDetectorBarcodeFormats : barcodeTypes]
         }
         
