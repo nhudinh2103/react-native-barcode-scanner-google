@@ -180,9 +180,9 @@
   *previewOffset = videoBox.origin;
 }
 
-#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
+//#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput
+/*- (void)captureOutput:(AVCaptureOutput *)captureOutput
     didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
 
@@ -249,7 +249,7 @@
       [self.overlayView addSubview:label];
     }
   });
-}
+}*/
 
 #pragma mark - Camera setup
 
