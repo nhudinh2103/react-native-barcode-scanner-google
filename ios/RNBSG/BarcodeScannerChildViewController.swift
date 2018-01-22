@@ -20,6 +20,9 @@ import UIKit
 class BarcodeScannerChildViewController: CameraViewController {
     var swiftView: BarcodeScannerView?
     
+    //@property(nonatomic, strong) GMVDetector *barcodeDetector;
+    var barcodeDetector: GMVDetector?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,13 +34,13 @@ class BarcodeScannerChildViewController: CameraViewController {
         
         self.setUpCameraPreview()
         
-        var options: [String: Int]?
+        /*var options: [String: Int]?
         //print("RNBSG2", swiftView?.myBarcodeTypes)
         if let barcodeTypes = swiftView?.maybeBarcodeTypes {
             options = [GMVDetectorBarcodeFormats : barcodeTypes]
         }
         
-        self.barcodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode, options: options)
+        self.barcodeDetector = GMVDetector(ofType: GMVDetectorTypeBarcode, options: options)*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +59,7 @@ class BarcodeScannerChildViewController: CameraViewController {
         let options: [ String: NSInteger ] = [ GMVDetectorImageOrientation: orientation.rawValue ]
         
         
-        if let barcodes = self.barcodeDetector.features(in: image, options: options) as? [GMVBarcodeFeature] {
+        if let barcodes = self.barcodeDetector?.features(in: image, options: options) as? [GMVBarcodeFeature] {
             //print("Detected \(barcodes.count) barcodes")
             
             for barcode in barcodes {

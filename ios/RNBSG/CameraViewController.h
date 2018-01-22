@@ -23,7 +23,7 @@
 @interface CameraViewController : UIViewController
 
 @property(nonatomic, assign) UIDeviceOrientation lastKnownDeviceOrientation;
-@property(nonatomic, strong) GMVDetector *barcodeDetector;
+//@property(nonatomic, strong) GMVDetector *barcodeDetector;
 @property(nonatomic, strong) AVCaptureSession *session;
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;

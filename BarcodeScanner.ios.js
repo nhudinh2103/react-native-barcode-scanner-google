@@ -49,8 +49,13 @@ class BarcodeScanner extends Component {
   }
 
   render() {
+    const props = {
+        barcodeTypes: -1,
+        ...this.props
+    };
+
     return <NativeBarcodeScanner 
-      {...this.props}
+      {...props}
       onBarcodeRead = {this._onBarcodeRead}
     />
   }
