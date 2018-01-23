@@ -49,20 +49,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-
-  // Set up default camera settings.
-  /*self.session = [[AVCaptureSession alloc] init];
-  self.session.sessionPreset = AVCaptureSessionPresetMedium;
-  [self updateCameraSelection];
-
-  // Set up video processing pipeline.
-  [self setUpVideoProcessing];
-
-  // Set up camera preview.
-  [self setUpCameraPreview];
-
-  // Initialize barcode detector.
-  self.barcodeDetector = [GMVDetector detectorOfType:GMVDetectorTypeBarcode options:nil];*/
 }
 
 - (void)viewDidLayoutSubviews {
