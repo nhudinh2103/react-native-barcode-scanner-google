@@ -168,74 +168,10 @@
 
 //#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 
-/*- (void)captureOutput:(AVCaptureOutput *)captureOutput
+- (void)captureOutput:(AVCaptureOutput *)captureOutput
     didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {
-
-  UIImage *image = [GMVUtility sampleBufferTo32RGBA:sampleBuffer];
-  AVCaptureDevicePosition devicePosition = AVCaptureDevicePositionBack;
-
-  // Establish the image orientation and detect features using GMVDetector.
-  UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
-  GMVImageOrientation orientation = [GMVUtility
-      imageOrientationFromOrientation:deviceOrientation
-            withCaptureDevicePosition:devicePosition
-             defaultDeviceOrientation:self.lastKnownDeviceOrientation];
-  NSDictionary *options = @{
-    GMVDetectorImageOrientation : @(orientation)
-  };
-
-  NSArray<GMVBarcodeFeature *> *barcodes = [self.barcodeDetector featuresInImage:image
-                                                                         options:options];
-  NSLog(@"Detected %lu barcodes.", (unsigned long)barcodes.count);
-
-  // The video frames captured by the camera are a different size than the video preview.
-  // Calculates the scale factors and offset to properly display the features.
-  CGFloat yScale = 1;
-  CGFloat xScale = 1;
-  CGPoint offset = CGPointZero;
-
-  [self computeCameraDisplayFrameScaleProperties:sampleBuffer
-                                previewFrameSize:self.previewLayer.frame.size
-                                          yScale:&yScale
-                                          xScale:&xScale
-                                          offset:&offset];
-
-  dispatch_sync(dispatch_get_main_queue(), ^{
-    // Remove previously added feature
-    for (UIView *featureview in self.overlayView.subviews) {
-      [featureview removeFromSuperview];
-    }
-
-    // Display detected features in overlay.
-    for (GMVBarcodeFeature *barcode in barcodes) {
-      CGPoint p0 = [self scalePoint:barcode.cornerPoints[0].CGPointValue
-                             xScale:xScale
-                             yScale:yScale
-                             offset:offset];
-      CGPoint p1 = [self scalePoint:barcode.cornerPoints[1].CGPointValue
-                             xScale:xScale
-                             yScale:yScale
-                             offset:offset];
-      CGPoint p2 = [self scalePoint:barcode.cornerPoints[2].CGPointValue
-                             xScale:xScale
-                             yScale:yScale
-                             offset:offset];
-      CGPoint p3 = [self scalePoint:barcode.cornerPoints[3].CGPointValue
-                             xScale:xScale
-                             yScale:yScale
-                             offset:offset];
-      NSArray *points = @[[NSValue valueWithCGPoint:p0], [NSValue valueWithCGPoint:p1],
-                          [NSValue valueWithCGPoint:p2], [NSValue valueWithCGPoint:p3]];
-      [DrawingUtility addShape:points toView:self.overlayView withColor:[UIColor purpleColor]];
-
-      CGRect textRect = CGRectMake(p0.x, p3.y, barcode.bounds.size.width, 50);
-      UILabel *label = [[UILabel alloc] initWithFrame:textRect];
-      label.text = barcode.rawValue;
-      [self.overlayView addSubview:label];
-    }
-  });
-}*/
+}
 
 #pragma mark - Camera setup
 
