@@ -29,7 +29,7 @@
 //@property(nonatomic, strong) AVCaptureSession *session;
 @property(nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
 @property(nonatomic, strong) dispatch_queue_t videoDataOutputQueue;
-@property(nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
+//@property(nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 //@property(nonatomic, assign) UIDeviceOrientation lastKnownDeviceOrientation;
 
 //@property(nonatomic, strong) GMVDetector *barcodeDetector;
@@ -77,7 +77,7 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
                                          duration:(NSTimeInterval)duration {
   // Camera rotation needs to be manually set when rotation changes.
-  if (self.previewLayer) {
+  /*if (self.previewLayer) {
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
       self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
     } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
@@ -87,7 +87,7 @@
     } else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
       self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
     }
-  }
+  }*/
 }
 
 #pragma mark - AVCaptureVideoPreviewLayer Helper method

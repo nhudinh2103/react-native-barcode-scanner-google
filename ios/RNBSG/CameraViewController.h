@@ -25,6 +25,7 @@
 @property(nonatomic, assign) UIDeviceOrientation lastKnownDeviceOrientation;
 //@property(nonatomic, strong) GMVDetector *barcodeDetector;
 @property(nonatomic, strong) AVCaptureSession *session;
+@property(nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
 

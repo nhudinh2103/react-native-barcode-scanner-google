@@ -40,6 +40,28 @@ class BarcodeScannerChildViewController: CameraViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func willAnimateRotation(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        guard let previewLayer = self.previewLayer else { return }
+        
+        var vo: AVCaptureVideoOrientation?
+        switch toInterfaceOrientation {
+        case .portrait:
+            vo = .portrait
+        case .portraitUpsideDown:
+            vo = .portraitUpsideDown
+        case .landscapeLeft:
+            vo = .landscapeLeft
+        case .landscapeRight:
+            vo = .landscapeRight
+        default:
+            break
+        }
+        
+        if let vo = vo {
+            previewLayer.connection.videoOrientation = vo
+        }
+    }
+    
     override func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         //super.captureOutput(captureOutput, didOutputSampleBuffer: sampleBuffer, from: connection)
         
