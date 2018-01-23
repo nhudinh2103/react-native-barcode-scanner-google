@@ -76,18 +76,6 @@
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
                                          duration:(NSTimeInterval)duration {
-  // Camera rotation needs to be manually set when rotation changes.
-  /*if (self.previewLayer) {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
-      self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-      self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-      self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
-      self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
-    }
-  }*/
 }
 
 #pragma mark - AVCaptureVideoPreviewLayer Helper method
