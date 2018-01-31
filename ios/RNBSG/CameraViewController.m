@@ -113,48 +113,10 @@
                                           yScale:(CGFloat *)previewYScale
                                           xScale:(CGFloat *)previewXScale
                                           offset:(CGPoint *)previewOffset {
-  // The video frames captured by the camera have different size than video preview.
-  // Calculates the scale factors and offset to properly display the features.
-  CMFormatDescriptionRef formatDescription = CMSampleBufferGetFormatDescription(sampleBuffer);
-  CGRect cleanAperture = CMVideoFormatDescriptionGetCleanAperture(formatDescription, false);
-  CGSize parentFrameSize;
-  if (CGSizeEqualToSize(previewFrameSize, CGSizeZero)) {
-    parentFrameSize = [[UIScreen mainScreen] bounds].size;
-  } else {
-    parentFrameSize = previewFrameSize;
-  }
-
-  // Assumes AVLayerVideoGravityResizeAspect
-  CGFloat cameraRatio = cleanAperture.size.height / cleanAperture.size.width;
-  CGFloat viewRatio = parentFrameSize.width / parentFrameSize.height;
-  CGFloat xScale = 1;
-  CGFloat yScale = 1;
-  CGRect videoBox = CGRectZero;
-  if (viewRatio > cameraRatio) {
-    videoBox.size.width = parentFrameSize.height * cleanAperture.size.width /
-        cleanAperture.size.height;
-    videoBox.size.height = parentFrameSize.height;
-    videoBox.origin.x = (parentFrameSize.width - videoBox.size.width) / 2;
-    videoBox.origin.y = (videoBox.size.height - parentFrameSize.height) / 2;
-
-    xScale = videoBox.size.width / cleanAperture.size.width;
-    yScale = videoBox.size.height / cleanAperture.size.height;
-  } else {
-    videoBox.size.width = parentFrameSize.width;
-    videoBox.size.height = cleanAperture.size.width *
-        (parentFrameSize.width / cleanAperture.size.height);
-    videoBox.origin.x = (videoBox.size.width - parentFrameSize.width) / 2;
-    videoBox.origin.y = (parentFrameSize.height - videoBox.size.height) / 2;
-
-    xScale = videoBox.size.width / cleanAperture.size.height;
-    yScale = videoBox.size.height / cleanAperture.size.width;
-  }
-  *previewYScale = yScale;
-  *previewXScale = xScale;
-  *previewOffset = videoBox.origin;
+  /* no rw. */
 }
 
-//#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
+#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
     didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
