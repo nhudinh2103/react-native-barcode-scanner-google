@@ -28,31 +28,31 @@ class BarcodeScanner extends Component {
 
   componentWillMount() {
     resumeScanner()
-        .then(() => {
-          console.log('BarcodeScanner was resumed on component mount.');
-        })
-        .catch(e => {
-          // In regular usage this 'exception' is harmless, so we just log it instead of warning the user (dev).
-          console.log(e);
-        });
+      .then(() => {
+        console.log('BarcodeScanner was resumed on component mount.');
+      })
+      .catch(e => {
+        // In regular usage this 'exception' is harmless, so we just log it instead of warning the user (dev).
+        console.log(e);
+      });
   }
 
   componentWillUnmount() {
     pauseScanner()
-        .then(() => {
-          console.log('BarcodeScanner was paused on component mount.');
-        })
-        .catch(e => {
-          // In regular usage this 'exception' is harmless, so we just log it instead of warning the user (dev).
-          console.log(e);
-        });
+      .then(() => {
+        console.log('BarcodeScanner was paused on component mount.');
+      })
+      .catch(e => {
+        // In regular usage this 'exception' is harmless, so we just log it instead of warning the user (dev).
+        console.log(e);
+      });
   }
 
   _onChange(event: Event) {
     switch (event.nativeEvent.key) {
       case BARCODE_FOUND_KEY:
         const onBarcodeRead =
-            this.props.onBarcodeRead || this.props.onBarCodeRead;
+          this.props.onBarcodeRead || this.props.onBarCodeRead;
         if (onBarcodeRead) {
           onBarcodeRead({
             data: event.nativeEvent.data, // the barcode itself
@@ -71,20 +71,20 @@ class BarcodeScanner extends Component {
 
   render() {
     return (
-        <NativeBarcodeScanner
-    {...this.props}
-    onChange={this._onChange.bind(this)}
-    />
-  );
+      <NativeBarcodeScanner
+        {...this.props}
+        onChange={this._onChange.bind(this)}
+      />
+    );
   }
 }
 
 const NativeBarcodeScanner = requireNativeComponent(
-    'RCTBarcodeScannerManager',
-    BarcodeScanner,
-    {
-      nativeOnly: { onChange: true }
-    }
+  'RCTBarcodeScannerManager',
+  BarcodeScanner,
+  {
+    nativeOnly: { onChange: true }
+  }
 );
 
 /* --------------------------------------
