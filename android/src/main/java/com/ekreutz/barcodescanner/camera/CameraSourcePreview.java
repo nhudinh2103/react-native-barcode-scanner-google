@@ -188,10 +188,15 @@ public class CameraSourcePreview extends ViewGroup {
 
         float r = 1.0f;
 
-        if (fillMode == FILL_MODE_COVER) {
-            r = Math.max((float) mWidth / (childRight - childLeft), (float) mHeight / (childBottom - childTop));
-        } else if (fillMode == FILL_MODE_FIT) {
-            r = Math.min((float) mWidth / (childRight - childLeft), (float) mHeight / (childBottom - childTop));
+        int delTaX = childRight - childLeft;
+        int deltaY = childBottom - childTop;
+        
+        if (delTaX != 0 && deltaY != 0) {
+            if (fillMode == FILL_MODE_COVER) {
+                r = Math.max((float) mWidth / delTaX, (float) mHeight / deltaY);
+            } else if (fillMode == FILL_MODE_FIT) {
+                r = Math.min((float) mWidth / delTaX, (float) mHeight / deltaY);
+            }
         }
 
         setScaleX(r);
